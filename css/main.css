@@ -1,12 +1,70 @@
+/* GLOBAL STYLES */
 * {
   box-sizing: border-box;
 }
 
 body {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #303030;
   font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
 }
 
 main {
   width: 100vw;
   height: 100vh;
+}
+
+.container-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container-inner {
+  width: 75%;
+  text-align: center;
+}
+
+.title-main {
+  font-size: 3rem;
+}
+
+.section {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.section-title {
+  margin: 0;
+}
+
+.section-link {
+  text-decoration: none;
+  color: blue;
+  /* cursor: pointer; */
+}
+/* GLOBAL STYLES END */
+
+
+
+/* Just FYI, you can override my global section styles with #your-section-name .what-you-want-style */
+/* Example: changing brandons title color to red
+            #section-during .section-title {
+              color: red;
+            } */
+
+/* Andy's Section */
+#section-pre {
+  border: #303030 solid 5px; /* just for visualization purposes for now */
+}
+
+/* Brandon's Section */
+#section-during {
+  border: #303030 solid 5px;
+}
+
+/* Brett's Section */
+#section-post {
+  border: #303030 solid 5px;
 }
