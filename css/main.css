@@ -65,7 +65,7 @@ main {
 }
 
 /* Brett's Section */
-/* setting up container and background Top level FLEX container */
+/* setting up container and background Top level Flex container */
 #section-post {
   display: flex;
   flex-direction: column;
@@ -83,7 +83,7 @@ main {
   justify-content: center;
   align-items: center;
 }
-/* configure the two columns of buttons */
+/* configure the two columns of buttons using Flex */
 #section-post > div > div{
     display: flex;
     flex-direction: column;
@@ -92,7 +92,22 @@ main {
     width:100%;
     height: auto;
 }
-/* setup even divs - set there liner gradiant from */
+/*    ----setup even and odd divs as link buttons----
+- Style your div how you want and set it to display block
+
+- set there linear gradient "to" the direction of the intended scroll 
+    ie: if you want the box to fill from left to right the linear gradient would 
+    "to right"
+
+- set the linear gradient to display all white
+ - This was done by setting white to 100%
+   and setting the background position to the appropriate side and bottom
+   -In context to the "appropriate side" ie: to scroll from left to right
+   set the background-position to "left bottem" and on Hover "right bottom"
+
+- transition set to ease on All events this allows
+ us to change the background position in a smooth fashion*/
+
 #section-post > div > div > div:nth-of-type(even){
   border: 1px solid black;
   border-radius: 3px;
@@ -125,7 +140,8 @@ main {
 #section-post > div > div > div:nth-of-type(odd):hover{
   background-position: right bottom;
 }
-
+/* just a simple ease of the link div's font color from 
+black to white on hover this should also be displayed as a block*/
 #section-post > div > div > div > div{
   text-align: center;
   font-size: 16px;
