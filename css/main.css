@@ -78,6 +78,7 @@ main {
 /* setting up button container */
 #section-post > div{
   width: 20%;
+  height:30vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -90,7 +91,7 @@ main {
     justify-content: space-between;
     align-items: center;
     width:100%;
-    height: auto;
+    height: 50%;
 }
 /*    ----setup even and odd divs as link buttons----
 - Style your div how you want and set it to display block
