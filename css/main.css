@@ -4,8 +4,7 @@
 }
 
 body {
-  background: #D0D0D0;
-  color: #303030;
+  background: #4285f4;
   font-family: "Raleway", sans-serif;
   overflow-x: hidden;
 }
@@ -27,6 +26,7 @@ main {
 }
 
 .title-main {
+  color: #E0E0E0;
   font-size: 3rem;
 }
 
@@ -36,6 +36,7 @@ main {
 }
 
 .section-title {
+  color: #E0E0E0;
   margin: 0;
 }
 
@@ -55,7 +56,7 @@ main {
 
 /* Andy's Section */
 #section-pre {
-  border: #303030 solid 5px;
+  /* border: #303030 solid 5px; */
 }
 #section-pre .section-link-container {
   display: flex;
@@ -64,7 +65,7 @@ main {
   align-items: space-around;
 }
 #section-pre .section-link {
-  background: #e0e0e0;
+  background: #D0D0D0;
   color: #303030;
   margin-top: 10px;
   border-radius: 5px;
