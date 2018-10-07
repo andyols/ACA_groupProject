@@ -65,6 +65,94 @@ main {
 }
 
 /* Brett's Section */
+/* setting up container and background Top level Flex container */
 #section-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/lightingBackground.jpg);
+  color: rgb(255, 255, 255);
   border: #303030 solid 5px;
 }
+/* setting up button container */
+#section-post > div{
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+/* configure the two columns of buttons using Flex */
+#section-post > div > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height: auto;
+}
+/*    ----setup even and odd divs as link buttons----
+- Style your div how you want and set it to display block
+
+- set there linear gradient "to" the direction of the intended scroll 
+    ie: if you want the box to fill from left to right the linear gradient would 
+    "to right"
+
+- set the linear gradient to display all white
+ - This was done by setting white to 100%
+   and setting the background position to the appropriate side and bottom
+   -In context to the "appropriate side" ie: to scroll from left to right
+   set the background-position to "left bottem" and on Hover "right bottom"
+
+- transition set to ease on All events this allows
+ us to change the background position in a smooth fashion*/
+
+#section-post > div > div > div:nth-of-type(even){
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 100px;
+  height: 30px;
+  display: block;
+  background: linear-gradient(to right, black 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+}
+
+#section-post > div > div > div:nth-of-type(odd){
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 100px;
+  height: 30px;
+  display: block;
+  background: linear-gradient(to left, black 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all .5s ease-out;
+}
+
+
+#section-post > div > div > div:nth-of-type(even):hover{
+  background-position: left bottom;
+}
+
+#section-post > div > div > div:nth-of-type(odd):hover{
+  background-position: right bottom;
+}
+/* just a simple ease of the link div's font color from 
+black to white on hover this should also be displayed as a block*/
+#section-post > div > div > div > div{
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px; 
+  color: black;
+  transition: all .6s ease-out;
+  display: block;
+}
+
+#section-post > div > div > div > div:hover{
+    color: white;
+}
+
+>>>>>>> 219aab2c184aff7b6197f15adccf56ffbed228c6
