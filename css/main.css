@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: #D0D0D0;
   color: #303030;
   font-family: "Raleway", sans-serif;
   overflow-x: hidden;
@@ -42,7 +42,6 @@ main {
 .section-link {
   text-decoration: none;
   color: blue;
-  /* cursor: pointer; */
 }
 /* GLOBAL STYLES END */
 
@@ -56,7 +55,64 @@ main {
 
 /* Andy's Section */
 #section-pre {
-  border: #303030 solid 5px; /* just for visualization purposes for now */
+  border: #303030 solid 5px;
+}
+#section-pre .section-link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-around;
+}
+#section-pre .section-link {
+  background: #e0e0e0;
+  color: #303030;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: .5rem 1rem;
+  text-align: left;
+  box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);
+}
+#section-pre .type {
+  color: #0287D0;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+#section-pre .title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+#section-pre .author {
+  opacity: .7;
+  font-style: italic;
+  font-size: .8rem;
+  margin: 0;
+}
+#section-pre .description {
+  font-size: .9rem; 
+  margin: 5px 0;
+}
+#section-pre .button-container {
+  display: flex;
+  justify-content: center;
+}
+#section-pre button {
+  cursor: pointer;
+  color: #303030;
+  background: #C0C0C0;
+  border: 1px solid #303030;
+  border-radius: 5px;
+  font-size: .9rem;
+  margin-top: 5px;
+  outline: none;
+  padding: .25rem .5rem;
+  text-align: center;
+  transition: all ease-in-out 100ms;
+}
+#section-pre button:hover {
+  background: #0287D0;
+  color: #e0e0e0;
 }
 
 /* Brandon's Section */
@@ -65,6 +121,92 @@ main {
 }
 
 /* Brett's Section */
+/* setting up container and background Top level Flex container */
 #section-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/lightingBackground.jpg);
+  color: rgb(255, 255, 255);
   border: #303030 solid 5px;
+}
+/* setting up button container */
+#section-post > div{
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+/* configure the two columns of buttons using Flex */
+#section-post > div > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height: auto;
+}
+/*    ----setup even and odd divs as link buttons----
+- Style your div how you want and set it to display block
+
+- set there linear gradient "to" the direction of the intended scroll 
+    ie: if you want the box to fill from left to right the linear gradient would 
+    "to right"
+
+- set the linear gradient to display all white
+ - This was done by setting white to 100%
+   and setting the background position to the appropriate side and bottom
+   -In context to the "appropriate side" ie: to scroll from left to right
+   set the background-position to "left bottem" and on Hover "right bottom"
+
+- transition set to ease on All events this allows
+ us to change the background position in a smooth fashion*/
+
+#section-post > div > div > div:nth-of-type(even){
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 100px;
+  height: 30px;
+  display: block;
+  background: linear-gradient(to right, black 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+}
+
+#section-post > div > div > div:nth-of-type(odd){
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 100px;
+  height: 30px;
+  display: block;
+  background: linear-gradient(to left, black 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all .5s ease-out;
+}
+
+
+#section-post > div > div > div:nth-of-type(even):hover{
+  background-position: left bottom;
+}
+
+#section-post > div > div > div:nth-of-type(odd):hover{
+  background-position: right bottom;
+}
+/* just a simple ease of the link div's font color from 
+black to white on hover this should also be displayed as a block*/
+#section-post > div > div > div > div{
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px; 
+  color: black;
+  transition: all .6s ease-out;
+  display: block;
+}
+
+#section-post > div > div > div > div:hover{
+    color: white;
 }
