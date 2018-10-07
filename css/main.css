@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: #D0D0D0;
   color: #303030;
   font-family: "Raleway", sans-serif;
   overflow-x: hidden;
@@ -42,7 +42,6 @@ main {
 .section-link {
   text-decoration: none;
   color: blue;
-  /* cursor: pointer; */
 }
 /* GLOBAL STYLES END */
 
@@ -56,7 +55,64 @@ main {
 
 /* Andy's Section */
 #section-pre {
-  border: #303030 solid 5px; /* just for visualization purposes for now */
+  border: #303030 solid 5px;
+}
+#section-pre .section-link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-around;
+}
+#section-pre .section-link {
+  background: #e0e0e0;
+  color: #303030;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: .5rem 1rem;
+  text-align: left;
+  box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);
+}
+#section-pre .type {
+  color: #0287D0;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+#section-pre .title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+#section-pre .author {
+  opacity: .7;
+  font-style: italic;
+  font-size: .8rem;
+  margin: 0;
+}
+#section-pre .description {
+  font-size: .9rem; 
+  margin: 5px 0;
+}
+#section-pre .button-container {
+  display: flex;
+  justify-content: center;
+}
+#section-pre button {
+  cursor: pointer;
+  color: #303030;
+  background: #C0C0C0;
+  border: 1px solid #303030;
+  border-radius: 5px;
+  font-size: .9rem;
+  margin-top: 5px;
+  outline: none;
+  padding: .25rem .5rem;
+  text-align: center;
+  transition: all ease-in-out 100ms;
+}
+#section-pre button:hover {
+  background: #0287D0;
+  color: #e0e0e0;
 }
 
 /* Brandon's Section */
@@ -154,5 +210,3 @@ black to white on hover this should also be displayed as a block*/
 #section-post > div > div > div > div:hover{
     color: white;
 }
-
->>>>>>> 219aab2c184aff7b6197f15adccf56ffbed228c6
