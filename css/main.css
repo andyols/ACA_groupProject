@@ -54,16 +54,18 @@ main {
             } */
 
 /* Andy's Section */
-#section-pre {
+#section-all {
   border: #303030 solid 5px;
 }
-#section-pre .section-link-container {
+#section-all .section-link-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: space-around;
 }
-#section-pre .section-link {
+#section-all .section-link {
+  display: flex;
+  flex-direction: column;
   background: #e0e0e0;
   color: #303030;
   margin-top: 10px;
@@ -72,32 +74,33 @@ main {
   text-align: left;
   box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);
 }
-#section-pre .type {
+#section-all .type {
   color: #0287D0;
   font-size: 1rem;
   font-weight: bold;
   margin: 0;
 }
-#section-pre .title {
+#section-all .title {
   font-size: 1rem;
   font-weight: bold;
   margin: 0;
 }
-#section-pre .author {
+#section-all .author {
   opacity: .7;
   font-style: italic;
   font-size: .8rem;
   margin: 0;
 }
-#section-pre .description {
+#section-all .description {
   font-size: .9rem; 
   margin: 5px 0;
 }
-#section-pre .button-container {
+#section-all .button-container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-#section-pre button {
+#section-all button {
   cursor: pointer;
   color: #303030;
   background: #C0C0C0;
@@ -110,7 +113,7 @@ main {
   text-align: center;
   transition: all ease-in-out 100ms;
 }
-#section-pre button:hover {
+#section-all button:hover {
   background: #0287D0;
   color: #e0e0e0;
 }
@@ -122,7 +125,10 @@ main {
 
 /* Brett's Section */
 /* setting up container and background Top level Flex container */
-#section-post {
+A {
+  text-decoration: none;
+}
+.section-post {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -131,23 +137,7 @@ main {
   color: rgb(255, 255, 255);
   border: #303030 solid 5px;
 }
-/* setting up button container */
-#section-post > div{
-  width: 20%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-/* configure the two columns of buttons using Flex */
-#section-post > div > div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width:100%;
-    height: auto;
-}
+
 /*    ----setup even and odd divs as link buttons----
 - Style your div how you want and set it to display block
 
@@ -164,7 +154,8 @@ main {
 - transition set to ease on All events this allows
  us to change the background position in a smooth fashion*/
 
-#section-post > div > div > div:nth-of-type(even){
+.button-container{
+  align-self: center;
   border: 1px solid black;
   border-radius: 3px;
   width: 100px;
@@ -176,29 +167,14 @@ main {
   transition: all .5s ease-out;
 }
 
-#section-post > div > div > div:nth-of-type(odd){
-  border: 1px solid black;
-  border-radius: 3px;
-  width: 100px;
-  height: 30px;
-  display: block;
-  background: linear-gradient(to left, black 50%, white 50%);
-  background-size: 200% 100%;
-  background-position: left bottom;
-  transition: all .5s ease-out;
-}
 
-
-#section-post > div > div > div:nth-of-type(even):hover{
+.button-container:hover{
   background-position: left bottom;
 }
 
-#section-post > div > div > div:nth-of-type(odd):hover{
-  background-position: right bottom;
-}
 /* just a simple ease of the link div's font color from 
 black to white on hover this should also be displayed as a block*/
-#section-post > div > div > div > div{
+.button-container > a{
   text-align: center;
   font-size: 16px;
   line-height: 30px; 
@@ -207,6 +183,6 @@ black to white on hover this should also be displayed as a block*/
   display: block;
 }
 
-#section-post > div > div > div > div:hover{
+.button-container > a:hover{
     color: white;
 }
