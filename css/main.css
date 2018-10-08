@@ -117,9 +117,18 @@ main {
 }
 
 /* Brandon's Section */
-#section-during {
-  border: #303030 solid 5px;
+#section-during .section-link-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: flex-start;
+  align-items: center;
+  color: #303030;
+  text-align: left;
+  padding: .25rem .5rem;
+  background: #D0D0D0;
 }
+
+
 
 /* Brett's Section */
 /* setting up container and background Top level Flex container */
