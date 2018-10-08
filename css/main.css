@@ -1,4 +1,5 @@
 /* GLOBAL STYLES */
+
 * {
   box-sizing: border-box;
 }
@@ -8,6 +9,10 @@ body {
   color: #303030;
   font-family: "Raleway", sans-serif;
   overflow-x: hidden;
+}
+
+A {
+  text-decoration: none;
 }
 
 main {
@@ -31,6 +36,7 @@ main {
 }
 
 .section {
+  border: #303030 solid 5px;
   margin-bottom: 1rem;
   padding: 1rem;
 }
@@ -43,27 +49,26 @@ main {
   text-decoration: none;
   color: blue;
 }
+
 /* GLOBAL STYLES END */
 
-
-
 /* Just FYI, you can override my global section styles with #your-section-name .what-you-want-style */
+
 /* Example: changing brandons title color to red
             #section-during .section-title {
               color: red;
             } */
 
 /* Andy's Section */
-#section-all {
-  border: #303030 solid 5px;
-}
-#section-all .section-link-container {
+
+.section-link-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: space-around;
 }
-#section-all .section-link {
+
+.section-link {
   display: flex;
   flex-direction: column;
   background: #e0e0e0;
@@ -72,71 +77,37 @@ main {
   border-radius: 5px;
   padding: .5rem 1rem;
   text-align: left;
-  box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.2);
 }
-#section-all .type {
+
+.type {
   color: #0287D0;
   font-size: 1rem;
   font-weight: bold;
   margin: 0;
 }
-#section-all .title {
+
+.title {
   font-size: 1rem;
   font-weight: bold;
   margin: 0;
 }
-#section-all .author {
+
+.author {
   opacity: .7;
   font-style: italic;
   font-size: .8rem;
   margin: 0;
 }
-#section-all .description {
-  font-size: .9rem; 
-  margin: 5px 0;
-}
-#section-all .button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#section-all button {
-  cursor: pointer;
-  color: #303030;
-  background: #C0C0C0;
-  border: 1px solid #303030;
-  border-radius: 5px;
+
+.description {
   font-size: .9rem;
-  margin-top: 5px;
-  outline: none;
-  padding: .25rem .5rem;
-  text-align: center;
-  transition: all ease-in-out 100ms;
-}
-#section-all button:hover {
-  background: #0287D0;
-  color: #e0e0e0;
+  margin: 5px 0;
 }
 
 /* Brandon's Section */
-#section-during {
-  border: #303030 solid 5px;
-}
 
 /* Brett's Section */
-/* setting up container and background Top level Flex container */
-A {
-  text-decoration: none;
-}
-.section-post {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/lightingBackground.jpg);
-  color: rgb(255, 255, 255);
-  border: #303030 solid 5px;
-}
 
 /*    ----setup even and odd divs as link buttons----
 - Style your div how you want and set it to display block
@@ -154,35 +125,35 @@ A {
 - transition set to ease on All events this allows
  us to change the background position in a smooth fashion*/
 
-.button-container{
+.button-container {
   align-self: center;
   border: 1px solid black;
   border-radius: 3px;
   width: 100px;
   height: 30px;
   display: block;
-  background: linear-gradient(to right, black 50%, white 50%);
+  background: linear-gradient(to right, #0287D0 50%, white 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all .5s ease-out;
 }
 
-
-.button-container:hover{
+.button-container:hover {
   background-position: left bottom;
 }
 
 /* just a simple ease of the link div's font color from 
 black to white on hover this should also be displayed as a block*/
-.button-container > a{
+
+.button-container>a {
   text-align: center;
   font-size: 16px;
-  line-height: 30px; 
+  line-height: 30px;
   color: black;
   transition: all .6s ease-out;
   display: block;
 }
 
-.button-container > a:hover{
-    color: white;
+.button-container>a:hover {
+  color: white;
 }
