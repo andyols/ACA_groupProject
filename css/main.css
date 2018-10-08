@@ -1,12 +1,28 @@
 /* GLOBAL STYLES */
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: #4285f4;
+  background-image: linear-gradient(
+    to bottom,
+    #4285f4,
+    #3077ce,
+    #2c69a8,
+    #305982,
+    #34495e
+  );
+  background-attachment: fixed;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  color: #303030;
   font-family: "Raleway", sans-serif;
   overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
 }
 
 main {
@@ -21,190 +37,91 @@ main {
 }
 
 .container-inner {
-  width: 75%;
+  width: 45%;
   text-align: center;
+}
+@media screen and (max-width: 960px) {
+  .container-inner {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .container-inner {
+    width: 95%;
+  }
 }
 
 .title-main {
-  color: #E0E0E0;
   font-size: 3rem;
+  color: #e0e0e0;
 }
 
 .section {
+  /* border: #303030 solid 5px; */
   margin-bottom: 1rem;
   padding: 1rem;
 }
 
 .section-title {
-  color: #E0E0E0;
   margin: 0;
+  color: #e0e0e0;
 }
 
-.section-link {
-  text-decoration: none;
-  color: blue;
-}
 /* GLOBAL STYLES END */
 
-
-
 /* Just FYI, you can override my global section styles with #your-section-name .what-you-want-style */
+
 /* Example: changing brandons title color to red
             #section-during .section-title {
               color: red;
             } */
 
-/* Andy's Section */
-#section-pre {
-  /* border: #303030 solid 5px; */
-}
-#section-pre .section-link-container {
+/* Andy's Section  */
+
+.section-link-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: space-around;
 }
-#section-pre .section-link {
-  background: #D0D0D0;
+
+.section-link {
+  display: flex;
+  flex-direction: column;
+  background: #e0e0e0;
   color: #303030;
   margin-top: 10px;
-  border-radius: 5px;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   text-align: left;
-  box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);
 }
-#section-pre .type {
-  color: #0287D0;
+
+.type {
+  color: #4285f4;
   font-size: 1rem;
   font-weight: bold;
   margin: 0;
 }
-#section-pre .title {
+
+.title {
   font-size: 1rem;
   font-weight: bold;
   margin: 0;
 }
-#section-pre .author {
-  opacity: .7;
+
+.author {
+  opacity: 0.7;
   font-style: italic;
-  font-size: .8rem;
   margin: 0;
 }
-#section-pre .description {
-  font-size: .9rem; 
+
+.description {
   margin: 5px 0;
-}
-#section-pre .button-container {
-  display: flex;
-  justify-content: center;
-}
-#section-pre button {
-  cursor: pointer;
-  color: #303030;
-  background: #C0C0C0;
-  border: 1px solid #303030;
-  border-radius: 5px;
-  font-size: .9rem;
-  margin-top: 5px;
-  outline: none;
-  padding: .25rem .5rem;
-  text-align: center;
-  transition: all ease-in-out 100ms;
-}
-#section-pre button:hover {
-  background: #0287D0;
-  color: #e0e0e0;
 }
 
 /* Brandon's Section */
-#section-during .section-link-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#section-during .section-link {
-  background: #D0D0D0;
-  color: #303030;
-  margin-top: 10px;
-  border-radius: 5px;
-  padding: .5rem 1rem;
-  text-align: left;
-  box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.2);
-}
-
-#section-during .type {
-  color: #0287D0;
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 0;
-}
-#section-during .title {
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 0;
-}
-#section-during .author {
-  opacity: .7;
-  font-style: italic;
-  font-size: .8rem;
-  margin: 0;
-}
-#section-during .description {
-  font-size: .9rem; 
-  margin: 5px 0;
-}
-#section-during .button-container {
-  display: flex;
-  justify-content: center;
-}
-#section-during button {
-  cursor: pointer;
-  color: #303030;
-  background: #C0C0C0;
-  border: 1px solid #303030;
-  border-radius: 5px;
-  font-size: .9rem;
-  margin-top: 5px;
-  outline: none;
-  padding: .25rem .5rem;
-  text-align: center;
-  transition: all ease-in-out 100ms;
-}
-#section-during button:hover {
-  background: #0287D0;
-  color: #e0e0e0;
-}
 
 /* Brett's Section */
-/* setting up container and background Top level Flex container */
-#section-post {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/lightingBackground.jpg);
-  color: rgb(255, 255, 255);
-  border: #303030 solid 5px;
-}
-/* setting up button container */
-#section-post > div{
-  width: 20%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-/* configure the two columns of buttons using Flex */
-#section-post > div > div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width:100%;
-    height: auto;
-}
+
 /*    ----setup even and odd divs as link buttons----
 - Style your div how you want and set it to display block
 
@@ -221,49 +138,39 @@ main {
 - transition set to ease on All events this allows
  us to change the background position in a smooth fashion*/
 
-#section-post > div > div > div:nth-of-type(even){
-  border: 1px solid black;
+.button-container {
+  align-self: center;
+  border: 1px solid #303030;
   border-radius: 3px;
   width: 100px;
   height: 30px;
   display: block;
-  background: linear-gradient(to right, black 50%, white 50%);
+  background: linear-gradient(to right, #4285f4 50%, #e0e0e0 50%);
   background-size: 200% 100%;
   background-position: right bottom;
-  transition: all .5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
-#section-post > div > div > div:nth-of-type(odd){
-  border: 1px solid black;
-  border-radius: 3px;
-  width: 100px;
-  height: 30px;
-  display: block;
-  background: linear-gradient(to left, black 50%, white 50%);
-  background-size: 200% 100%;
-  background-position: left bottom;
-  transition: all .5s ease-out;
-}
-
-
-#section-post > div > div > div:nth-of-type(even):hover{
+.button-container:hover {
   background-position: left bottom;
 }
 
-#section-post > div > div > div:nth-of-type(odd):hover{
-  background-position: right bottom;
+.comments {
+  color: #e0e0e0;
 }
+
 /* just a simple ease of the link div's font color from 
 black to white on hover this should also be displayed as a block*/
-#section-post > div > div > div > div{
+
+.button-container > a {
   text-align: center;
   font-size: 16px;
-  line-height: 30px; 
-  color: black;
-  transition: all .6s ease-out;
+  line-height: 30px;
+  color: #303030;
+  transition: all 0.6s ease-out;
   display: block;
 }
 
-#section-post > div > div > div > div:hover{
-    color: white;
+.button-container > a:hover {
+  color: #e0e0e0;
 }
