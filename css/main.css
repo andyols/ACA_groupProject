@@ -132,7 +132,7 @@ main {
 - transition set to ease on All events this allows
  us to change the background position in a smooth fashion*/
 
-.button-container {
+ .section-link:nth-of-type(odd) .button-container {
   align-self: center;
   border: 1px solid #303030;
   border-radius: 3px;
@@ -145,9 +145,26 @@ main {
   transition: all 0.5s ease-out;
 }
 
-.button-container:hover {
+.section-link:nth-of-type(odd) .button-container:hover {
   background-position: left bottom;
 }
+
+.section-link:nth-of-type(even) .button-container {
+    align-self: center;
+    border: 1px solid #303030;
+    border-radius: 3px;
+    width: 100px;
+    height: 30px;
+    display: block;
+    background: linear-gradient(to left, #4285f4 50%, #e0e0e0 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: all 0.5s ease-out;
+  }
+  
+  .section-link:nth-of-type(even) .button-container:hover {
+    background-position: right bottom;
+  }
 
 .comments {
   color: #e0e0e0;
