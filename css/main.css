@@ -15,7 +15,6 @@ body {
   );
   background-attachment: fixed;
   background-position: center;
-  /* background-repeat: no-repeat; */
   color: #303030;
   font-family: "Raleway", sans-serif;
   overflow-x: hidden;
@@ -56,12 +55,6 @@ main {
   color: #e0e0e0;
 }
 
-.section {
-  /* border: #303030 solid 5px; */
-  margin-bottom: 1rem;
-  padding: 1rem;
-}
-
 .section-title {
   margin: 0;
   color: #e0e0e0;
@@ -90,20 +83,25 @@ main {
   flex-direction: column;
   background: #e0e0e0;
   color: #303030;
-  margin-top: 10px;
+  margin: 10px 0;
   padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
   text-align: left;
+}
+
+.section-title {
+  margin: 2rem 0;
+  font-size: 1.8rem;
 }
 
 .type {
   color: #4285f4;
-  font-size: 1rem;
   font-weight: bold;
   margin: 0;
 }
 
 .title {
-  font-size: 1rem;
   font-weight: bold;
   margin: 0;
 }
@@ -112,10 +110,6 @@ main {
   opacity: 0.7;
   font-style: italic;
   margin: 0;
-}
-
-.description {
-  margin: 5px 0;
 }
 
 /* Brandon's Section */
@@ -138,7 +132,7 @@ main {
 - transition set to ease on All events this allows
  us to change the background position in a smooth fashion*/
 
-.button-container {
+ .section-link:nth-of-type(odd) .button-container {
   align-self: center;
   border: 1px solid #303030;
   border-radius: 3px;
@@ -151,9 +145,26 @@ main {
   transition: all 0.5s ease-out;
 }
 
-.button-container:hover {
+.section-link:nth-of-type(odd) .button-container:hover {
   background-position: left bottom;
 }
+
+.section-link:nth-of-type(even) .button-container {
+    align-self: center;
+    border: 1px solid #303030;
+    border-radius: 3px;
+    width: 100px;
+    height: 30px;
+    display: block;
+    background: linear-gradient(to left, #4285f4 50%, #e0e0e0 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: all 0.5s ease-out;
+  }
+  
+  .section-link:nth-of-type(even) .button-container:hover {
+    background-position: right bottom;
+  }
 
 .comments {
   color: #e0e0e0;
