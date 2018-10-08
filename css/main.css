@@ -5,13 +5,23 @@
 }
 
 body {
-  background: #D0D0D0;
+  background-image: linear-gradient(
+    to bottom,
+    #4285f4,
+    #3077ce,
+    #2c69a8,
+    #305982,
+    #34495e
+  );
+  background-attachment: fixed;
+  background-position: center;
+  /* background-repeat: no-repeat; */
   color: #303030;
   font-family: "Raleway", sans-serif;
   overflow-x: hidden;
 }
 
-A {
+a {
   text-decoration: none;
 }
 
@@ -27,27 +37,34 @@ main {
 }
 
 .container-inner {
-  width: 75%;
+  width: 45%;
   text-align: center;
+}
+@media screen and (max-width: 960px) {
+  .container-inner {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .container-inner {
+    width: 95%;
+  }
 }
 
 .title-main {
   font-size: 3rem;
+  color: #e0e0e0;
 }
 
 .section {
-  border: #303030 solid 5px;
+  /* border: #303030 solid 5px; */
   margin-bottom: 1rem;
   padding: 1rem;
 }
 
 .section-title {
   margin: 0;
-}
-
-.section-link {
-  text-decoration: none;
-  color: blue;
+  color: #e0e0e0;
 }
 
 /* GLOBAL STYLES END */
@@ -75,13 +92,13 @@ main {
   color: #303030;
   margin-top: 10px;
   border-radius: 5px;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   text-align: left;
   box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.2);
 }
 
 .type {
-  color: #0287D0;
+  color: #4285f4;
   font-size: 1rem;
   font-weight: bold;
   margin: 0;
@@ -94,14 +111,12 @@ main {
 }
 
 .author {
-  opacity: .7;
+  opacity: 0.7;
   font-style: italic;
-  font-size: .8rem;
   margin: 0;
 }
 
 .description {
-  font-size: .9rem;
   margin: 5px 0;
 }
 
@@ -127,33 +142,37 @@ main {
 
 .button-container {
   align-self: center;
-  border: 1px solid black;
+  border: 1px solid #303030;
   border-radius: 3px;
   width: 100px;
   height: 30px;
   display: block;
-  background: linear-gradient(to right, #0287D0 50%, white 50%);
+  background: linear-gradient(to right, #4285f4 50%, #e0e0e0 50%);
   background-size: 200% 100%;
   background-position: right bottom;
-  transition: all .5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .button-container:hover {
   background-position: left bottom;
 }
 
+.comments {
+  color: #e0e0e0;
+}
+
 /* just a simple ease of the link div's font color from 
 black to white on hover this should also be displayed as a block*/
 
-.button-container>a {
+.button-container > a {
   text-align: center;
   font-size: 16px;
   line-height: 30px;
-  color: black;
-  transition: all .6s ease-out;
+  color: #303030;
+  transition: all 0.6s ease-out;
   display: block;
 }
 
-.button-container>a:hover {
-  color: white;
+.button-container > a:hover {
+  color: #e0e0e0;
 }
